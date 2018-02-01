@@ -22,11 +22,11 @@ function setup() {
 
 // runs every frame
 function draw() {
-  background(0,0,255);
+  background(167,140,250);
   fill(255, 255, 255);
 
   // https://p5js.org/reference/#/p5/ellipse
-  ellipse(50, 50, 80, 80);
+  ellipse(100, 100, 80, 80);
 
   // https://p5js.org/reference/#/p5/fill
   fill(255, 204, 0);
@@ -43,7 +43,7 @@ function draw() {
   [centerX, centerY] = [width/2, height/2];
 
   // rendering text
-  fill(255, 204, 0);
+  fill(0, 255, 0);
   textSize(32);
   text('word', centerX, centerY);
 
