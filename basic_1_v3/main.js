@@ -13,7 +13,8 @@ var duck;
 var mcqueen;
 function preload() {
   // // load an image
-
+  duck = loadImage('assets/duck.png');
+  mcqueen = loadImage('assets/lightning.png');
 }
 
 
@@ -24,36 +25,23 @@ function setup() {
 
 // runs every frame
 function draw() {
-  background(239, 240, 242);
+  background(167,140,250);
+
+// we are setting a "for loop" 
+  //the fill is (R,G,B)
+
+  for (var i=0; i<100; i++) {
+      fill(100 + i*20, 255-i*10, 0);
+      //textSize(i*2)
+      //text('cool', i*10, i*10);
+      ellipse(i*30, i*30, 160, 160);
+      image(mcqueen, 100+i*10, 200);
+  }
 
 
-  fill(0, 0, 0);
-    strokeWeight(20);
-    line(0,0,2000,0);
-    line(0,120,2000,120);
-    line(0,320,2000,320);
-    line(0,600,2000,600);
-    line(0,780,2000,780);
+  fill(155, 255, 255);
 
-    line(160,0,160,2000);
-    line(320,0,320,2000);
-    line(600,0,600,2000);
-    line(900,0,900,2000);
-
-  fill(255, 42, 0);
-      strokeWeight(1);
-      rect(170,130,140,180)
-    
-  fill(0,46,255);
-  rect(610, 130, 280, 180);
-
-
-  fill(255,242, 0);
-   strokeWeight(20);
-    rect(160, 500, 160, 100);
-
-
-  //rotate(.2);
+  rotate(.2);
 
   // https://p5js.org/reference/#/p5/rect
   //rect(130, 120, 55, 55);
@@ -61,26 +49,29 @@ function draw() {
   //rect(70, 160, 55, 55);
 
   // https://p5js.org/reference/#/p5/fill
-
+  fill(255, 204, 0);
 
   // https://p5js.org/reference/#/p5/ellipse
 
   //ellipse(0, 0, 280, 280);
 
-
+  fill(255, 100, 0);
+  
+  rotate(0.1);
+  rect(200, 180, 55, 55);
   resetMatrix();
 
   // get the center x and y coordinates
   [centerX, centerY] = [width/2, height/2];
 
   // rendering text
-  //fill(0, 255, 0);
-  //textSize(100);
-  //text('word', centerX, centerY);
+  fill(0, 255, 0);
+  textSize(100);
+  text('word', centerX, centerY);
 
   // render the image at x=125, y=200
   //image(duck, 125, 200);
-  //image(mcqueen, 100, 50); 
+  image(mcqueen, 100, 50); 
 }
 
 
